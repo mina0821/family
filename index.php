@@ -160,9 +160,14 @@
                     $bonus = 0;
                     while ($row = mysqli_fetch_array($result)) {
                         if ($row["COUNT(distinct catg)"] >= 3) {
-                            $bonus = $bonus + 30;
+                            $bonus = $bonus + 60;
                         }
                     }
+                    $catg = "bonus";
+                    $date = "2000-01-01";
+                    $hrs = $bonus / 60;
+    
+                    mysqli_query($con, "UPDATE activities SET hrs = " .$hrs. " WHERE catg='bonus';");
                     echo "<a><table><tr>Bonus Points Achieved</tr> <th>".htmlentities($bonus)." points</th></table></a>";
                     ?>
                     <a href="#"><table><th>View Details</th></table></a>

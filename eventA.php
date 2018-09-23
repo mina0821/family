@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     mysqli_select_db($con, "activities");
     $catg = "Recreational Activities";
     $date = "2018-04-22";
-    $hrs = 2;
+    $hrs = 4;
     
     mysqli_query($con, "INSERT activities (catg, dates, hrs) VALUES ('".$catg."', '".$date."', '".$hrs."')");
     mysqli_close($con);
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     <tr><th>Description:</th><td>This event brings families together on Earth day for them to bond with oneself and each other though collaboration.</td></tr>
                     <tr><th>Category:</th><td>Recreational Activities</td></tr>
                     <tr><th>Date:</th><td>2018-04-22</td></tr>
-                    <tr><th>Duration:</th><td>2 hours</td></tr>
+                    <tr><th>Duration:</th><td>4 hours</td></tr>
                     <br>
             </table></div>
             <br>
